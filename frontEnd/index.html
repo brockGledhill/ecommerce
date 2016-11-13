@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html ng-app="ecommerce">
+<html ng-app="beDesign">
 
 <head>
     <meta charset="utf-8">
     <title>BE Designs</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body ng-controller="mainCtrl">
+
+    <header>
+      <div class="logo"></div>
+      <div class="headerTitle">BE Designs</div>
+      <div class="searchContainer">
+        <div class="searchIcon"></div>
+        <input class="searchBox" placeholder="Search Product"/>
+      </div>
+    </header>
 
     <ui-view></ui-view>
 

@@ -1,4 +1,4 @@
-var beDesigns = angular.module('ecommerce', ['ui.router']);
+var beDesigns = angular.module('beDesign', ['ui.router']);
 
 beDesigns.config(function($stateProvider, $urlRouterProvider){
 

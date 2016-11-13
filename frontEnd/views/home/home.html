@@ -1,1 +1,10 @@
-{{test}}
+<div ng-repeat="product in products">
+
+  <div> {{product.product_name}} </div>
+  <img class="image" ng-src="{{product.product_image_url}}"/>
+  <div> {{product.product_description}} </div>
+  <div> {{product.product_price}} </div>
+
+  <div> {{item}} </div>
+
+</div>
