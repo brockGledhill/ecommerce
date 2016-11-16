@@ -47,7 +47,7 @@ app.put('/api/customers', customerCtrl.updateCustomer);
 
 //DELETE\\
 app.delete('/api/admin', adminCtrl.deleteAdmin);
-app.delete('/api/products', productCtrl.deleteProduct);
+app.delete('/api/products/:id', productCtrl.deleteProduct);
 app.delete('/api/customers', customerCtrl.deleteCustomer);
 
 //Port\\

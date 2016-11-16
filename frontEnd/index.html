@@ -3,28 +3,42 @@
 
 <head>
     <meta charset="utf-8">
-    <title>BE Designs</title>
+    <link href="https://fonts.googleapis.com/css?family=Cookie|Raleway" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <title>BE Designs</title>
 </head>
 
 <body ng-controller="mainCtrl">
 
     <header>
-      <div class="logo"></div>
-      <div class="headerTitle">BE Designs</div>
-      <div class="searchContainer">
-        <div class="searchIcon"></div>
-        <input class="searchBox" placeholder="Search Product"/>
-      </div>
+      <div class="logo" ui-sref="home"><span>BE</span> Designs</div>
+        <div class="hamburger"></div>
     </header>
 
     <ui-view></ui-view>
+
+    <footer>
+        <div class="socialMediaContainer">
+            <a class="socialMedia facebook" href="https://www.facebook.com"></a>
+            <a class="twitter" href="https://www.twitter.com"></a>
+            <a class="instagram" href="https://www.instagram.com"></a>
+        </div>
+        <div class="copyright">© 2016 | All Rights Reserved to
+            <div class="logoMini"><span>BE</span> Designs</div>
+        </div>
+    </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
     <script src="js/app.js"></script>
     <script src="js/mainCtrl.js"></script>
+    <script src="views/products/allProductsCtrl.js"></script>
+    <script src="views/products/singleProductCtrl.js"></script>
+    <!-- <script src="js/customersCtrl.js"></script>
+    <script src="js/cartCtrl.js"></script>
+    <script src="js/ordersCtrl.js"></script> -->
     <script src="js/mainSrvc.js"></script>
+
 </body>
 
 </html>
