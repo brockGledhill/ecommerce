@@ -1,12 +1,13 @@
 <div class="spacer"></div>
 
 <div class="productsContainer">
-    <div class="productBox">
+    <div class="productBox" ng-repeat="product in cart">
         <div class="productName"> {{product.product_name}} </div>
         <img class="productImage" ng-src="{{product.product_image_url}}" />
         <div class="productPrice"> {{product.product_price}} </div>
+        <div class="productDescription"> {{product.product_description}} </div>
+          <button ng-click="remove(item)">Remove</button>
     </div>
-    <div class="productDescription"> {{product.product_description}} </div>
-</div>
 
-<button ng-click="addToCart()">Add To Cart</button>
+
+</div>

@@ -12,7 +12,16 @@
 
     <header>
       <div class="logo" ui-sref="home"><span>BE</span> Designs</div>
-        <div class="hamburger"></div>
+        <div class="menuNav">
+          <div class="home" ui-sref="home">Home</div>
+          <!-- <div class="profile" ui-sref="home">Profile</div> -->
+          <div class="about" ui-sref="about">About</div>
+          <div class="products" ui-sref="products">Products</div>
+          <div class="contact" ui-sref="contact">Contact</div>
+          <div class="cartContainer" ui-sref="cart">
+            <div class="cart" ui-sref="cart"></div>
+          </div>
+        </div>
     </header>
 
     <ui-view></ui-view>
@@ -24,7 +33,7 @@
             <a class="instagram" href="https://www.instagram.com"></a>
         </div>
         <div class="copyright">© 2016 | All Rights Reserved to
-            <div class="logoMini"><span>BE</span> Designs</div>
+            <div class="logoMini"><span class="spanMini">BE</span> Designs</div>
         </div>
     </footer>
 
@@ -34,9 +43,9 @@
     <script src="js/mainCtrl.js"></script>
     <script src="views/products/allProductsCtrl.js"></script>
     <script src="views/products/singleProductCtrl.js"></script>
-    <!-- <script src="js/customersCtrl.js"></script>
-    <script src="js/cartCtrl.js"></script>
-    <script src="js/ordersCtrl.js"></script> -->
+    <!-- <script src="views/customers/customersCtrl.js"></script> -->
+    <script src="views/cart/cartCtrl.js"></script>
+    <!-- <script src="views/orders/ordersCtrl.js"></script> -->
     <script src="js/mainSrvc.js"></script>
 
 </body>

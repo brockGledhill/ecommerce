@@ -22,6 +22,18 @@ beDesigns.config(function($stateProvider, $urlRouterProvider){
     url: '/product/:id',
     templateUrl: 'views/products/singleProduct.html',
     controller: 'singleProductCtrl'
+  })
+
+  .state('cart', {
+    url: '/cart',
+    templateUrl: 'views/cart/cart.html',
+    controller: 'cartCtrl'
+  })
+
+  .state('about', {
+    url: '/about',
+    templateUrl: 'views/about/about.html',
+    controller: 'aboutCtrl'
   });
 
 });

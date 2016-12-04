@@ -11,13 +11,16 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static(__dirname + '/../frontEnd'));
 
-var massiveInstance = massive.connectSync({connectionString: connectionString});
+var massiveInstance = massive.connectSync({
+    connectionString: connectionString
+});
 
 app.set('db', massiveInstance);
 
 //Controllers\\
-var productCtrl = require('./controllers/productCtrl'),
-    adminCtrl = require('./controllers/adminCtrl'),
+var adminCtrl = require('./controllers/adminCtrl'),
+    productCtrl = require('./controllers/productCtrl'),
+    cartCtrl = require('./controllers/cartCtrl'),
     customerCtrl = require('./controllers/customerCtrl'),
     orderCtrl = require('./controllers/orderCtrl');
 
@@ -31,18 +34,22 @@ app.get('/api/products/:id', productCtrl.getProduct);
 app.get('/api/customers', customerCtrl.getAllCustomers);
 app.get('/api/customers/:id', customerCtrl.getCustomer);
 
+app.get('/api/cart', cartCtrl.getCart);
+
 app.get('/api/orders', orderCtrl.getAllOrders);
 app.get('/api/orders/:id', orderCtrl.getOrder);
 
 //POST\\
 app.post('/api/adimn', adminCtrl.createAdmin);
 app.post('/api/products', productCtrl.createProduct);
+// app.post('/api/cart', cartCtrl.addToCart);
 app.post('/api/customers', customerCtrl.createCustomer);
 app.post('/api/orders', orderCtrl.createOrder);
 
 //PUT\\
 app.put('api/admin', adminCtrl.updateAdmin);
 app.put('/api/products', productCtrl.updateProduct);
+app.put('/api/cart', cartCtrl.updateCart);
 app.put('/api/customers', customerCtrl.updateCustomer);
 
 //DELETE\\
@@ -51,6 +58,6 @@ app.delete('/api/products/:id', productCtrl.deleteProduct);
 app.delete('/api/customers', customerCtrl.deleteCustomer);
 
 //Port\\
-app.listen(8000, function(){
-  console.log('I pity 8000 fools!');
+app.listen(8000, function() {
+    console.log('I pity 8000 fools!');
 });
